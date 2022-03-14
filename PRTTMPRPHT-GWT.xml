@@ -1,0 +1,38 @@
+<templateSet group="PRTTMPRPHT-GWT">
+  <template name="jspf" value="public final native $TYPE$ get$NAME$()/*-{&#10;    return this.$NAME_LC$;&#10;}-*/;&#10;&#10;public final native void set$NAME$($TYPE$ $NAME_LC$)/*-{&#10;    this.$NAME_LC$ = $NAME_LC$;&#10;}-*/;&#10;" description="JSNI Property (final): Getter and Setter" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_LC" expression="camelCase(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jspfb" value="public final native boolean is$NAME$()/*-{&#10;    return this.$NAME_LC$;&#10;}-*/;&#10;&#10;public final native void set$NAME$(boolean $NAME_LC$)/*-{&#10;    this.$NAME_LC$ = $NAME_LC$;&#10;}-*/;&#10;" description="JSNI Property (final boolean): Getter and Setter" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_LC" expression="camelCase(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jsp" value="public native $TYPE$ get$NAME$()/*-{&#10;    return this.$NAME_LC$;&#10;}-*/;&#10;&#10;public native void set$NAME$($TYPE$ $NAME_LC$)/*-{&#10;    this.$NAME_LC$ = $NAME_LC$;&#10;}-*/;&#10;" description="JSNI Property: Getter and Setter" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_LC" expression="camelCase(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jspb" value="public native boolean is$NAME$()/*-{&#10;    return this.$NAME_LC$;&#10;}-*/;&#10;&#10;public native void set$NAME$(boolean $NAME_LC$)/*-{&#10;    this.$NAME_LC$ = $NAME_LC$;&#10;}-*/;&#10;" description="JSNI Property (boolean): Getter and Setter" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_LC" expression="camelCase(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jsobj" value="import com.google.gwt.core.client.JavaScriptObject;&#10;&#10;@SuppressWarnings(&quot;ProtectedMemberInFinalClass&quot;)&#10;public final class $CLASS_NAME$ extends JavaScriptObject {&#10;    protected $CLASS_NAME$() {} // Required by GWT.&#10;&#10;    $END$&#10;    &#10;    /**&#10;     * Replacement constructor.&#10;     * Creates a new native {@link $CLASS_NAME$}.&#10;     * @return The new instance.&#10;     */&#10;    public static native $CLASS_NAME$ create(&#10;        &#10;    )/*-{&#10;        return {&#10;            &#10;        };    &#10;    }-*/;&#10;}" description="Create JavaScriptObject class with a static creation method." toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

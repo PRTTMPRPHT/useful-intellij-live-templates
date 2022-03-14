@@ -1,0 +1,7 @@
+<templateSet group="PRTTMPRPHT-SCSS">
+  <template name="smix" value="@mixin flex-row($center-horizontal: false, $center-vertical: false) {&#10;  display: flex;&#10;  flex-direction: row;&#10;&#10;  @if $center-horizontal {&#10;    justify-content: center;&#10;  } @else {&#10;    justify-content: flex-start;&#10;  }&#10;&#10;  @if $center-vertical {&#10;    align-items: center;&#10;  } @else {&#10;    align-items: flex-start;&#10;  }&#10;}&#10;&#10;@mixin flex-column($center-horizontal: false, $center-vertical: false) {&#10;  display: flex;&#10;  flex-direction: column;&#10;&#10;  @if $center-horizontal {&#10;    align-items: center;&#10;  } @else {&#10;    align-items: flex-start;&#10;  }&#10;&#10;  @if $center-vertical {&#10;    justify-content: center;&#10;  } @else {&#10;    justify-content: flex-start;&#10;  }&#10;}&#10;&#10;@mixin unselectable {&#10;  -webkit-user-select: none;&#10;  -moz-user-select: none;&#10;  -ms-user-select: none;&#10;  user-select: none;&#10;}" description="Add some useful evergreen mixins" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

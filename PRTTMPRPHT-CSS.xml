@@ -1,0 +1,73 @@
+<templateSet group="PRTTMPRPHT-CSS">
+  <template name="frow" value="display: flex;&#10;flex-direction: row;" description="Flex Row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="fcol" value="display: flex;&#10;flex-direction: column;" description="Flex Column" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="hb" value="html, body {&#10;    height: 100%;&#10;    width: 100%;&#10;    padding: 0;&#10;    margin: 0;&#10;}" description="html, body setup" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS_RULESET_LIST" value="true" />
+    </context>
+  </template>
+  <template name="tease" value="transition: $PROP$ $TIME$ ease;" description="Ease Transition" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TIME" expression="" defaultValue="&quot;300ms&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="tcub" value="transition: $PROP$ $TIME$ cubic-bezier($PARAM_1$, $PARAM_2$, $PARAM_3$, $PARAM_4$); " description="Cubic Bezier Transition" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TIME" expression="" defaultValue="&quot;400ms&quot;" alwaysStopAt="true" />
+    <variable name="PARAM_1" expression="" defaultValue="&quot;0.25&quot;" alwaysStopAt="true" />
+    <variable name="PARAM_2" expression="" defaultValue="&quot;0.8&quot;" alwaysStopAt="true" />
+    <variable name="PARAM_3" expression="" defaultValue="&quot;0.25&quot;" alwaysStopAt="true" />
+    <variable name="PARAM_4" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="bpm" value="@media only screen and (max-width: $BREAKPOINT$) {&#10;$END$&#10;}" description="Mobile Breakpoint" toReformat="false" toShortenFQNames="true">
+    <variable name="BREAKPOINT" expression="" defaultValue="&quot;768px&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="gfnt" value="@font-face {&#10;    font-family: &quot;$FONT_NAME$&quot;;&#10;    font-style: $FONT_STYLE$;&#10;    font-weight: $FONT_WEIGHT$;&#10;    font-display: swap;&#10;    src: local(&quot;$FONT_NAME$$ADDITIVE$&quot;), local(&quot;$FONT_NAME_COLLAPSED$-$ADDITIVE_COLLAPSED$&quot;), url(&quot;$PATH$$FONT_NAME_COLLAPSED$-$ADDITIVE_COLLAPSED$.ttf&quot;) format(&quot;truetype&quot;);&#10;}&#10;" description="@font-face for a local Google Font (ttf)" toReformat="false" toShortenFQNames="true">
+    <variable name="FONT_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FONT_STYLE" expression="" defaultValue="&quot;normal&quot;" alwaysStopAt="true" />
+    <variable name="FONT_WEIGHT" expression="" defaultValue="&quot;400&quot;" alwaysStopAt="true" />
+    <variable name="ADDITIVE" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <variable name="FONT_NAME_COLLAPSED" expression="regularExpression(FONT_NAME, &quot;\\s&quot;, &quot;&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="ADDITIVE_COLLAPSED" expression="regularExpression(ADDITIVE, &quot;\\s&quot;, &quot;&quot;)" defaultValue="&quot;Regular&quot;" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="&quot;/assets/font/&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="nlc" value="$SELECTOR$:not(:last-child) {&#10;$END$&#10;}" description=":not(:last-child)" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="nfc" value="$SELECTOR$:not(:first-child) {&#10;$END$&#10;}" description=":not(:first-child)" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

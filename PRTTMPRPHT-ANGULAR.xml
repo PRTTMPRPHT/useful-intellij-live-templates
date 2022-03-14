@@ -1,0 +1,19 @@
+<templateSet group="PRTTMPRPHT-ANGULAR">
+  <template name="ngsc" value="import {Component, OnInit, OnDestroy} from &quot;@angular/core&quot;;&#10;import {Subject} from &quot;rxjs&quot;;&#10;&#10;@Component({&#10;    selector: &quot;$PREFIX$-$SELECTOR$&quot;,&#10;    templateUrl: &quot;./$SELECTOR$.component.html&quot;,&#10;    styleUrls: [&quot;./$SELECTOR$.component.scss&quot;]&#10;})&#10;export class $NAME$Component implements OnInit, OnDestroy {&#10;  destroyed$: Subject&lt;void&gt; = new Subject&lt;void&gt;();&#10;  &#10;  ngOnInit(): void {&#10;  }&#10;  &#10;  ngOnDestroy(): void {&#10;    this.destroyed$.next();&#10;    this.destroyed$.complete();&#10;  }&#10;}" description="Create smart component with lifecycle subject" toReformat="false" toShortenFQNames="true">
+    <variable name="PREFIX" expression="" defaultValue="&quot;app&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(camelCase(SELECTOR))" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECTOR" expression="substringBefore(fileNameWithoutExtension(), &quot;.&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ngit" value="&lt;$TAG_NAME$ *ngFor=&quot;let $VAR$ of $LIST$; index as $INDEX$&quot;&gt;$END$&lt;/$TAG_NAME$&gt;" description="ngFor with Index" toReformat="false" toShortenFQNames="true">
+    <variable name="TAG_NAME" expression="" defaultValue="&quot;div&quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <variable name="LIST" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INDEX" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>

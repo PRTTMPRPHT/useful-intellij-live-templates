@@ -1,0 +1,15 @@
+<templateSet group="PRTTMPRPHT-JS">
+  <template name="clog" value="console.log(&quot;[$VALUE$]&quot;, $VALUE$);" description="Better console.log()" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="clof" value="console.log(&quot;[$VALUE$] in [$FILENAME$]&quot;, $VALUE$);" description="Better console.log() with filename" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FILENAME" expression="fileName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
