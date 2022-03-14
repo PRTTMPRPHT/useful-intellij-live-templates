@@ -340,4 +340,4 @@ export class $FILE_NAME$ {
 
 ## License and Contributing
 
-By contributing, you agree that your contributions will be licensed under its [Unlicense](./LICENSE).
+By contributing, you agree that your contributions will be licensed under the repository's [Unlicense](./LICENSE).
