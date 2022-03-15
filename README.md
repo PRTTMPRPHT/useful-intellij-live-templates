@@ -11,6 +11,10 @@ On Windows, templates are located in the following directory:
 
 `%APPDATA%\JetBrains\<CURRENT_VERSION>\templates`
 
+Respectively, on Mac:
+
+`~/Library/Application Support/JetBrains/<CURRENT_VERSION>/templates`
+
 Restart your IDE after import.
 
 You can adjust, rename and disable/enable any templates however you like after you've imported the files.
