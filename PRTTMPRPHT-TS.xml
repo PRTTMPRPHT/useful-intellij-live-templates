@@ -1,5 +1,5 @@
 <templateSet group="PRTTMPRPHT-TS">
-  <template name="sing" value="export class $FILE_NAME$ {&#10;    private static instance: $FILE_NAME$;&#10;&#10;    private constructor() {}&#10;    &#10;    $END$&#10;    &#10;    public static get(): $FILE_NAME$ {&#10;        if (!$FILE_NAME$.instance) {&#10;            $FILE_NAME$.instance = new $FILE_NAME$();&#10;        }&#10;        &#10;        return $FILE_NAME$.instance;&#10;    }&#10;}" description="Singleton class" toReformat="false" toShortenFQNames="true">
+  <template name="sing" value="export class $FILE_NAME$ {&#10;    private static instance: $FILE_NAME$;&#10;&#10;    private constructor() {}&#10;&#10;    $END$&#10;&#10;    public static get(): $FILE_NAME$ {&#10;        if (!$FILE_NAME$.instance) {&#10;            $FILE_NAME$.instance = new $FILE_NAME$();&#10;        }&#10;&#10;        return $FILE_NAME$.instance;&#10;    }&#10;}" description="Singleton class" toReformat="false" toShortenFQNames="true">
     <variable name="FILE_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="TypeScript" value="true" />

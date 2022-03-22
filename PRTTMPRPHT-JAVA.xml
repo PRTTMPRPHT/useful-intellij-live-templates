@@ -1,0 +1,14 @@
+<templateSet group="PRTTMPRPHT-JAVA">
+  <template name="sing" value="public class $FILE_NAME$ {&#10;    private static $FILE_NAME$ instance;&#10;&#10;    private $FILE_NAME$() {}&#10;&#10;    $END$&#10;&#10;    public static $FILE_NAME$ get() {&#10;        if (instance == null) {&#10;            instance = new $FILE_NAME$();&#10;        }&#10;        return instance;&#10;    }&#10;}" description="Singleton class" toReformat="false" toShortenFQNames="true">
+    <variable name="FILE_NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_CONSUMER" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+</templateSet>

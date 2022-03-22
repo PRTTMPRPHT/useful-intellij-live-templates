@@ -250,6 +250,29 @@ public final native void set$NAME$(boolean $NAME_LC$)/*-{
 }-*/;
 ```
 
+### Java
+
+#### sing
+
+Basic singleton class. Name is derived from the file name.
+
+```
+public class $FILE_NAME$ {
+    private static $FILE_NAME$ instance;
+
+    private $FILE_NAME$() {}
+
+    $END$
+
+    public static $FILE_NAME$ get() {
+        if (instance == null) {
+            instance = new $FILE_NAME$();
+        }
+        return instance;
+    }
+}
+```
+
 ### JavaScript
 
 #### clof
